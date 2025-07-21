@@ -53,7 +53,7 @@ def restart_server():
 def monitor_application():
     try:
         response = requests.get("http://ec2-44-201-128-169.compute-1.amazonaws.com:8081")
-        if False:
+        if response.status_code == 200 :
             print("Application is up and running!")
         else:
             print("Application down, sending mail!")
